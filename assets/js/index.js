@@ -71,11 +71,6 @@ new Vue({
     },
   },
   methods: {
-    handleInput(val) {
-      if (!val) {
-        this.isShow = false;
-      }
-    },
     setHistoryList(val) {
       var list = this.getHistoryList();
       if (list.indexOf(val) === -1) {
