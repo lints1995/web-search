@@ -18,8 +18,7 @@
             <figure class="title-img" @click.stop="handleClickIcon" v-if="cureentEngine">
                 <img :src="'./assets/img/'+ cureentEngine.icon" alt="logo" />
             </figure>
-            <input v-model="searchKey" @focus="handleInputFocus" @blur="handleInputBlur" placeholder="请输入..."
-                class="input-item" />
+            <input v-model="searchKey" @input="handleInput" placeholder="请输入..." class="input-item" />
             <ul class="engine-list-wrap" v-show="isShow">
                 <li class="engine-item" v-for="(item,index) in engineLists" @click.stop="handleClickSearch(item)">
                     <img :src="'./assets/img/'+item.icon" alt="logo" />
@@ -35,7 +34,6 @@
         </div>
     </div>
     <script src="./libs/rem.js"></script>
-    <script src="./libs/jquery.min.js"></script>
     <script src="./libs/vue.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
